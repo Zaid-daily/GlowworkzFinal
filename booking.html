@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Install — GloWerkz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-grid">
+  <header class="site-header">
+    <div class="brand"><div class="logo-glow"></div><a class="logo font-bebas" href="index.html">GloWerkz Garage</a></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="enquiries.html">Enquiries</a>
+
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="section-title font-bebas">Book Your Install</h1>
+    <p class="sub">A deposit is required to finalize the booking. We’ll confirm exact schedule after payment.</p>
+
+    <form id="bookingForm" class="form neon-form" action="https://formspree.io/f/mjkozpqq" method="POST">
+      <div class="grid-2">
+        <label>Full Name
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Phone
+          <input type="tel" name="phone" required />
+        </label>
+        <label>Exact Location
+          <input type="text" name="location" placeholder="Enter exact suburb/street" required />
+        </label>
+        <label>Preferred Date
+          <input type="date" name="date" required />
+        </label>
+        <label>Kit Type
+          <select name="kit" required>
+            <option value="">Select a kit…</option>
+            <option>Mercedes Kit</option>
+            <option>Universal Kit</option>
+            <option>Starlights Kit</option>
+            <option>BMW F30</option>
+            <option>BMW F20</option>
+            <option>Audi A3</option>
+            <option>Range Rover Velar</option>
+            <option>Range Rover Vogue</option>
+          </select>
+        </label>
+      </div>
+
+      <label>Comments / Notes
+        <textarea name="comments" rows="4" placeholder="Any special requests?"></textarea>
+      </label>
+
+      <div class="actions">
+        <button class="btn btn-primary white-glow" type="submit">Send Booking Request</button>
+        <a class="btn btn-ghost white-glow" href="index.html#kits">Back to Kits</a>
+      </div>
+    </form>
+  </main>
+
+  <div id="formModal" class="modal hidden">
+    <div class="modal-inner">
+      <h3 class="font-bebas">Thanks! We got your request.</h3>
+      <p>We’ll reach out shortly to confirm your install window.</p>
+      <button class="btn btn-primary" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <footer class="site-footer"><small>© <span id="year"></span> GloWerkz Garage</small></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

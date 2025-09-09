@@ -1,0 +1,2 @@
+// Paste your real publishable key:
+window.STRIPE_PUBLISHABLE_KEY = "pk_live_51RuSnHQXop5tU0stV8Qm2dyRN6d5ex2cIF0fCMZCsnLh6jGfj4sPBc19OfTVQEOD4jaNYrdGEE07h4VJIbg7vpm500jzUldEOG";

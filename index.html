@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GloWerkz Garage — Street Mod Energy</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body class="bg-grid scanlines">
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-glow"></div>
+      <a class="logo font-bebas" href="index.html">GloWerkz Garage</a>
+
+    </div>
+    <input id="nav-toggle" type="checkbox" />
+    <label for="nav-toggle" class="burger">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="nav-links">
+      <a href="#kits">Kits</a>
+      <a href="booking.html">Book</a>
+      <a href="enquiries.html">Enquiries</a>
+      <a href="https://instagram.com/glowerkz_garage" target="_blank">@glowerkz_garage</a>
+      <a href="ratings.html" class="nav-link">Ratings & Comments</a>
+    </nav>    
+  </header>
+
+  <section class="hero bg-aurora">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/placeholder-hero.jpg">
+    </video>
+    <div class="hero-inner">
+      <h1 class="font-orbitron neon-title">Many Kits. Endless Style.</h1>
+      <p class="sub">Dark streets • Neon vibes • Precision installs</p>
+      <a class="btn btn-primary white-glow" href="#kits">Shop Now</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="kits" class="section">
+      <h2 class="section-title font-bebas">Choose Your Kit</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="media">
+            <img src="/public/assets/mercedes.jpg" alt="Mercedes Kit" class="product-image" />
+          </div>
+          <h3 class="font-bebas">Mercedes Kit</h3>
+          <p class="price">$600 kit • $1250 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_MERCEDES_INSTALL_REPLACE">Book & Pay</button>
+
+        </article>
+        
+
+        <article class="card">
+          <div class="media">
+            <img src="/public/assets/universal.jpg" alt="Universal Kit" class="product-image" />
+          </div>
+          <h3 class="font-bebas">Universal Kit</h3>
+          <p class="price">$150 kit • $400 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_UNIVERSAL_INSTALL_REPLACE">Book & Pay</button>
+
+        </article>
+        
+
+        <article class="card">
+          <div class="media">
+            <img src="/public/assets/starlights.jpg" alt="Starlights Kit" class="product-image" />
+          </div>
+          <h3 class="font-bebas">Starlights Kit</h3>
+          <p class="price">$200 kit • $850 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_STARLIGHTS_INSTALL_REPLACE">Book & Pay</button>
+
+        </article>
+        
+
+        <article class="card">
+          <div class="media placeholder">Image / Video</div>
+          <h3 class="font-bebas">BMW F30</h3>
+          <p class="price">$500 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_1RxRtLQXop5tU0st3SE9utAY">Book & Pay</button>
+          <div class="rating">
+
+        </article>
+
+        <article class="card">
+          <div class="media placeholder">Image / Video</div>
+          <h3 class="font-bebas">BMW F20</h3>
+          <p class="price">$400 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_1RxRtoQXop5tU0st2BQ4sdMP">Book & Pay</button>
+
+        </article>
+
+        <article class="card">
+          <div class="media placeholder">Image / Video</div>
+          <h3 class="font-bebas">Audi A3</h3>
+          <p class="price">$450 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_1RxRuVQXop5tU0stc937mST1">Book & Pay</button>
+          
+        </article>
+
+        <article class="card">
+          <div class="media placeholder">Image / Video</div>
+          <h3 class="font-bebas">Range Rover Velar</h3>
+          <p class="price">$600 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_1RxRuzQXop5tU0stmoJozy0X">Book & Pay</button>
+
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="/public/assets/range rover vogue .jpg" alt="Range Rover Vogue" class="product-image" />
+          </div>
+          <h3 class="font-bebas">Range Rover Vogue</h3>
+          <p class="price">$650 supplied & installed</p>
+          <button class="btn btn-ghost white-glow checkout" data-price="price_1RxRvSQXop5tU0stj3us1hN1">Book & Pay</button>
+
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title font-bebas">Click Reactor</h2>
+      <p class="sub">Click or tap to trigger neon ripples.</p>
+      <div id="reactor" class="reactor-panel"></div>
+    </section>
+    
+    
+
+    <section class="section">
+      <h2 class="section-title font-bebas">From The Community</h2>
+      <p class="sub">Tag <strong>@glowerkz_garage</strong> to be featured!</p>
+      <div class="ig-grid">
+        <div class="ig-item"><img src="/public/assets/ig_1.jpg" alt="Community Post 1" class="ig-img" /></div>
+        <div class="ig-item"><img src="/public/assets/ig_2.jpg" alt="Community Post 2" class="ig-img" /></div>
+        <div class="ig-item"><img src="/public/assets/ig_3.jpg" alt="Community Post 3" class="ig-img" /></div>
+        <div class="ig-item"><img src="/public/assets/ig_4.jpg" alt="Community Post 4" class="ig-img" /></div>
+        <div class="ig-item"><img src="/public/assets/ig_5.jpg" alt="Community Post 5" class="ig-img" /></div>
+        <div class="ig-item"><img src="/public/assets/ig_6.jpg" alt="Community Post 6" class="ig-img" /></div>
+      </div>
+    </section>
+    
+  </main>
+
+  <a class="sticky-cta" href="booking.html">Book Your Install Now</a>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> GloWerkz Garage • Sydney (Mobile Service)</small>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/reactor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

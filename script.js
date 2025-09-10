@@ -56,3 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
     stars.forEach((s) => s.classList.remove("active"));
   });
 });
+
+document.getElementById('imageUpload').addEventListener('change', function (e) {
+  const file = e.target.files[0];
+  const preview = document.getElementById('previewContainer');
+
+  if (file && file.type.startsWith('image/')) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      preview.innerHTML = `<img src="${event.target.result}" alt="Uploaded Image" />`;
+    };
+    reader.readAsDataURL(file);
+  } else {
+    preview.innerHTML = `<p>Invalid file type. Please upload an image.</p>`;
+  }
+});

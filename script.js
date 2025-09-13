@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let selectedRating = 0;
 
-
   // ⭐ Handle star click
   stars.forEach((star, index) => {
     star.addEventListener("click", () => {
@@ -27,20 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // Load existing reviews from localStorage
-const existingReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-// Add the new review to the beginning of the array
-existingReviews.unshift({
-  rating: selectedRating,
-  comment: comment
-});
-
-// Save updated reviews back to localStorage
-localStorage.setItem("reviews", JSON.stringify(existingReviews));
-
-
-    const comment = commentBox.value.trim();
+    const comment = commentBox.value.trim(); // ✅ moved this up
 
     if (selectedRating === 0) {
       alert("Please select a star rating!");
@@ -50,6 +36,18 @@ localStorage.setItem("reviews", JSON.stringify(existingReviews));
       alert("Please enter a comment!");
       return;
     }
+
+    // Load existing reviews from localStorage
+    const existingReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    // Add the new review to the beginning of the array
+    existingReviews.unshift({
+      rating: selectedRating,
+      comment: comment
+    });
+
+    // Save updated reviews back to localStorage
+    localStorage.setItem("reviews", JSON.stringify(existingReviews));
 
     // create review element
     const review = document.createElement("div");
@@ -70,5 +68,3 @@ localStorage.setItem("reviews", JSON.stringify(existingReviews));
     stars.forEach((s) => s.classList.remove("active"));
   });
 });
-
-

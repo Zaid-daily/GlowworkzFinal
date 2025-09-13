@@ -6,18 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let selectedRating = 0;
 
-  const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-savedReviews.forEach((r) => {
-  const review = document.createElement("div");
-  review.classList.add("review");
-  review.innerHTML = `
-    <p><strong>Rating:</strong> ${"⭐".repeat(r.rating)}</p>
-    <p><strong>Comment:</strong> ${r.comment}</p>
-    <hr>
-  `;
-  reviewsContainer.appendChild(review);
-});
-
 
   // ⭐ Handle star click
   stars.forEach((star, index) => {

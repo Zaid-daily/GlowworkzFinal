@@ -234,3 +234,45 @@ html {
     opacity: 0;
   }
 }
+
+/* Hide nav links by default on mobile */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* adjust based on header height */
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  /* Show nav when checkbox is checked */
+  #nav-toggle:checked + .burger + .nav-links {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+  }
+
+  .burger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s ease;
+  }
+}

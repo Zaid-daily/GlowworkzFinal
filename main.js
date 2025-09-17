@@ -1,8 +1,6 @@
-// Update footer year
 const YEAR = document.getElementById('year');
 if (YEAR) YEAR.textContent = new Date().getFullYear();
 
-// Formspree form handling
 const forms = document.querySelectorAll('form[action^="https://formspree.io/f/mjkozpqq"]');
 forms.forEach(form => {
   form.addEventListener('submit', async (e) => {
@@ -30,16 +28,6 @@ forms.forEach(form => {
   });
 });
 
-// Modal close button
 document.getElementById('closeModal')?.addEventListener('click', () => {
   document.getElementById('formModal')?.classList.add('hidden');
 });
-
-// Mobile nav toggle
-const navToggle = document.getElementById('nav-toggle');
-if (navToggle) {
-  navToggle.addEventListener('change', (e) => {
-    document.querySelector('.nav-links')?.classList.toggle('open', e.target.checked);
-  });
-}
-

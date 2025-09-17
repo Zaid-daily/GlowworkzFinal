@@ -17,14 +17,11 @@ app.use(cors({ origin: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-// Health check
 app.get("/health", (req, res) => res.json({ ok: true }));
 
-// Serve SPA-ish routes if needed
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`GloWerkz server running on http://localhost:${PORT}`);
-});
+  console.log(`

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="bg-grid scanlines">
   <header class="site-header">
@@ -25,11 +26,12 @@
       <a href="enquiries.html">Enquiries</a>
       <a href="https://instagram.com/glowerkz_garage" target="_blank">@glowerkz_garage</a>
       <a href="ratings.html">Ratings</a>
-    </nav>    
+    </nav>
   </header>
 
   <section class="hero bg-aurora">
-    <video class="hero-video" autoplay muted loop playsinline poster="placeholder-hero.jpg"></video>
+    <video class="hero-video" autoplay muted loop playsinline poster="placeholder-hero.jpg">
+    </video>
     <div class="hero-inner">
       <h1 class="font-orbitron neon-title">Many Kits. Endless Style.</h1>
       <p class="sub">Dark streets • Neon vibes • Precision installs</p>
@@ -46,9 +48,12 @@
             <img src="mercedes.jpg" alt="Mercedes Kit" class="product-image" />
           </div>
           <h3 class="font-bebas">Mercedes Kit</h3>
-          <p class="price">Mercedes Ambient Lighting Kit<br>
-          Specifically designed for all new-generation Mercedes models, this kit integrates seamlessly with your interior for a factory-finish look. Bring your Benz to life with premium multi-zone ambient lighting that feels straight out of the showroom.</p>
-          <a href="booking.html" class="btn btn-ghost white-glow">Book</a>
+          <p class="price"> Mercedes Ambient Lighting Kit
+Specifically designed for all new-generation Mercedes models, this kit integrates seamlessly with your interior for a factory-finish look. Bring your Benz to life with premium multi-zone ambient lighting that feels straight out of the showroom.
+</p>
+          <a href="booking.html" class="btn btn-ghost white-glow checkout">
+           Book
+          </a>
         </article>
 
         <article class="card">
@@ -56,9 +61,12 @@
             <img src="universal.jpg" alt="Universal Kit" class="product-image" />
           </div>
           <h3 class="font-bebas">Universal Kit</h3>
-          <p class="price">Universal Ambient Lighting Kit<br>
-          A complete lighting upgrade for any car make or model. Includes 6 lighting strips and 4 footwell lights, with optional speaker lights for an immersive glow. Fully customizable to match your style and create the perfect vibe inside your ride.</p>
-          <a href="booking.html" class="btn btn-ghost white-glow">Book</a>
+          <p class="price"> Universal Ambient Lighting Kit
+A complete lighting upgrade for any car make or model. Includes 6 lighting strips and 4 footwell lights, with optional speaker lights for an immersive glow. Fully customizable to match your style and create the perfect vibe inside your ride.
+</p>
+          <a href="booking.html" class="btn btn-ghost white-glow checkout">
+           Book
+          </a>
         </article>
 
         <article class="card">
@@ -66,9 +74,11 @@
             <img src="starlights.jpg" alt="Starlights Kit" class="product-image" />
           </div>
           <h3 class="font-bebas">Starlights Kit</h3>
-          <p class="price">Starlight Headliner<br>
-          Transform your roof into a night sky with our custom starlight installation. Choose your color, pattern, and intensity to create the iconic “Rolls Royce” effect in any car. A true statement upgrade that makes your interior unforgettable.</p>
-          <a href="booking.html" class="btn btn-ghost white-glow">Book</a>
+          <p class="price"> Starlight Headliner
+Transform your roof into a night sky with our custom starlight installation. Choose your color, pattern, and intensity to create the iconic “Rolls Royce” effect in any car. A true statement upgrade that makes your interior unforgettable.</p>
+          <a href="booking.html" class="btn btn-ghost white-glow checkout">
+           Book
+          </a>
         </article>
       </div>
     </section>

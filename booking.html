@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Book Install — Glowworkz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="grid-background" aria-hidden="true"></div>
+  
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="top-header">
+      <div class="brand">GLOWWORKZ GARAGE</div>
+      <a class="btn secondary" href="index.html">Home</a>
+    </header>
+
+    <section class="hero">
+      <h1 class="neon">Book Your Install</h1>
+      <p class="lead">Fill out the details and we'll be in touch to confirm.</p>
+    </section>
+
+    <main>
+      <form id="bookingForm" class="form-box" action="https://formspree.io/f/mjkozpqq" method="POST" autocomplete="on">
+        <label>Full Name<input type="text" name="full_name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input type="tel" name="phone" required></label>
+        <label>Exact Location<input type="text" name="exact_location" placeholder="Enter exact suburb/street" required></label>
+        <label>Preferred Date (dd/mm/yyyy)<input type="text" name="preferred_date" placeholder="dd/mm/yyyy" pattern="^([0-3]?\d)\/([0-1]?\d)\/\d{4}$" required></label>
+        <label>Model of Vehicle<input type="text" name="model_short" placeholder="Make & model"></label>
+        <label>What is the make and model of your vehicle?<input type="text" name="model_long" placeholder="Engine / trim / year"></label>
+        <label>Kit Type
+          <select name="kit_type" required>
+            <option value="">Select a kit…</option>
+            <option>Mercedes Kit</option>
+            <option>Universal Kit</option>
+            <option>Starlight Kit</option>
+            <option>Custom</option>
+          </select>
+        </label>
+        <label>Comments / Notes<textarea name="notes" rows="3" placeholder="Any special requests?"></textarea></label>
+        <label>Promo Code (optional)<input type="text" name="promo_code" placeholder="Enter code"></label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Booking Request</button>
+          <a class="btn secondary" href="index.html">Cancel</a>
+        </div>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+      </form>
+    </main>
+
+    <footer class="site-footer">© 2025 Glowworkz Garage</footer>
+  </div>
+</body>
+</html>
+

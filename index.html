@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Glowworkz Garage</title>
+
+  <link rel="preload" href="RushDriver.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+
+  <!-- Rush Driver font will be loaded via style.css @font-face; place RushDriver.woff2 next to these files -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP (for smooth cinematic animations + marquee) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+</head>
+
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+  <!-- Intro (full-screen) - only shown once per session -->
+  <div id="introScreen" class="intro-screen" aria-hidden="false">
+    <img id="introImage" src="placeholder-hero.jpg" alt="Intro image - replace with your image">
+    <h1 class="intro-text">Welcome To <span class="gradient">Glowworkz</span></h1>
+  </div>
+
+<!-- Promo Popup -->
+<div id="promoPopup" class="promo-popup" aria-hidden="true">
+    <div class="popup-content">
+      <h2>🔥 Use code <span class="highlight">NEONE</span> now for <strong>$50 off</strong>!</h2>
+      <button id="closePopup" class="close-btn" aria-label="Close popup">✕</button>
+    </div>
+  </div>
+  
+  <div class="promo-countdown">
+    <span class="label">Code NEONE expires in:</span>
+    <span id="countdown"></span>
+  </div>
+  
+
+ <!-- Grid background image -->
+ <div class="grid-background" aria-hidden="true"></div>
+
+  <!-- Grid overlay (in DOM via CSS too) -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- MAIN WRAPPER -->
+  <div class="wrap" id="wrap">
+
+    <!-- HEADER -->
+    <header class="top-header">
+      <div class="brand">GLOWWORKZ GARAGE</div>
+      <div class="nav-right">
+        <a class="insta-link" href="https://www.instagram.com/glowerkz_garage" target="_blank" rel="noopener">📸</a>
+        <button id="navBtn" class="nav-btn" aria-label="Open menu" aria-expanded="false">
+          <span class="nav-lines"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- slideout nav -->
+    <nav id="navMenu" class="nav-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Book Now</a>
+      <a href="enquiries.html">Contact</a>
+    </nav>
+
+    <!-- top marquee -->
+    <div class="top-marquee">
+        <div id="marqueeTrack" class="marquee-track">
+          <span class="marquee-item">Starlight Headliners</span>
+          <span class="dot">•</span>
+          <span class="marquee-item">Custom Installs</span>
+          <span class="dot">•</span>
+          <span class="marquee-item">Glowworkz Garage</span>
+          <span class="dot">•</span>
+          <span class="marquee-item">Book Now</span>
+          <span class="dot">•</span>
+          <span class="marquee-item">Use Code NEONE</span>
+        </div>
+      </div>
+      
+      
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="neon reveal">Drive The Light</h1>
+      <p class="lead reveal">Custom Ambient Lighting Kits by Professionals</p>
+      <a class="btn reveal" href="booking.html">Book Now</a>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats reveal" id="stats">
+      <div class="stat">
+        <div class="num" data-target="50">0</div>
+        <div class="label">Kits Installed</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-target="100">0</div>
+        <div class="label">Customer Satisfaction</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-target="3">0</div>
+        <div class="label">Years Experience</div>
+      </div>
+    </div>
+
+    <!-- KITS (vertical cards) -->
+    <main>
+      <h2 class="section-title gradient reveal">Our Kits</h2>
+      <section class="kits">
+        <article class="kit reveal">
+          <img src="kit2.jpg" alt="Mercedes Kit - placeholder">
+          <div class="meta">
+            <h3>Mercedes Kit</h3>
+            <p>Mercedes Ambient Lighting Kit
+                Specifically designed for all new-generation Mercedes models, this kit integrates seamlessly with your interior for a factory-finish look. Bring your Benz to life with premium multi-zone ambient lighting that feels straight out of the showroom.</p>
+            <div class="cta">
+              <a class="btn small" href="booking.html">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="kit reveal">
+          <img src="kit1.jpg" alt="Universal Kit - placeholder">
+          <div class="meta">
+            <h3>Universal Kit</h3>
+            <p>Universal Ambient Lighting Kit
+                A complete lighting upgrade for any car make or model. Includes 6 lighting strips and 4 footwell lights, with optional speaker lights for an immersive glow. Fully customizable to match your style and create the perfect vibe inside your ride. </p>
+            <div class="cta">
+              <a class="btn small" href="booking.html">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="kit reveal">
+          <img src="kit3.jpg" alt="Starlight Kit - placeholder">
+          <div class="meta">
+            <h3>Starlight Kit</h3>
+            <p>Starlight Headliner
+                Transform your roof into a night sky with our custom starlight installation. Choose your color, pattern, and intensity to create the iconic “Rolls Royce” effect in any car. A true statement upgrade that makes your interior unforgettable.</p>
+            <div class="cta">
+              <a class="btn small" href="booking.html">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- COMMUNITY -->
+      <h2 class="section-title reveal">From The Community</h2>
+      <section class="community-grid reveal">
+        <div class="post"><img src="comm1.jpg" alt=""></div>
+        <div class="post"><img src="comm2.jpg" alt=""></div>
+        <div class="post"><img src="comm3.jpg" alt=""></div>
+        <div class="post"><img src="comm4.jpg" alt=""></div>
+        <div class="post"><img src="comm5.jpg" alt=""></div>
+        <div class="post"><img src="comm6.jpg" alt=""></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer reveal">© 2025 Glowworkz Garage</footer>
+
+  </div><!-- /wrap -->
+</body>
+</html>
+
+
+
+

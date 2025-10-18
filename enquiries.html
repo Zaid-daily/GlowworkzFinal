@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Contact — Glowworkz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="grid-background" aria-hidden="true"></div>
+ 
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="top-header">
+      <div class="brand">GLOWWORKZ GARAGE</div>
+      <a class="btn secondary" href="index.html">Home</a>
+    </header>
+
+    <section class="hero">
+      <h1 class="neon">Contact Us</h1>
+      <p class="lead">Questions? Send a message and we'll respond.</p>
+    </section>
+
+    <main>
+      <form id="contactForm" class="form-box" action="https://formspree.io/f/mjkozpqq" method="POST">
+        <label>Full Name<input type="text" name="full_name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+          <a class="btn secondary" href="index.html">Cancel</a>
+        </div>
+        <div id="contactMessage" class="form-message" aria-live="polite"></div>
+      </form>
+    </main>
+
+    <footer class="site-footer">© 2025 Glowworkz Garage</footer>
+  </div>
+</body>
+</html>
+
+
+
+
+
